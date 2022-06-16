@@ -1,0 +1,11 @@
+.todo {
+    display: flex;
+    justify-content: center;
+    
+
+    &__list {
+        list-style-type: none;
+        border: 1px solid black;
+        width: 80%;
+    }
+}
