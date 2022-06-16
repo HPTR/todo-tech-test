@@ -1,16 +1,15 @@
 import React from 'react'
 import "./AddTodo.scss"
 
-import TodoInput from '../TodoInput/TodoInput'
 import InlineButton from '../InlineButton/InlineButton'
 
 const AddTodo = (props) => {
 
-  const {addTodo} = props;
+  const {addTodo, handleInputChange} = props;
 
   return (
     <div>
-      <TodoInput />
+      <input type='text' onChange={handleInputChange} />
       <InlineButton addTodo={addTodo} />
     </div>
   )

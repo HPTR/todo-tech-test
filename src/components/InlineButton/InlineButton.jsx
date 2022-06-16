@@ -1,9 +1,14 @@
 import React from 'react'
 import './InlineButton.scss'
 
-const InlineButton = () => {
+const InlineButton = (props) => {
+
+  const {addTodo} = props;
+
   return (
-    <div>InlineButton</div>
+    <div>
+      <button onClick={addTodo}>Plus</button>
+    </div>
   )
 }
 
