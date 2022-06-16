@@ -1,11 +1,33 @@
 .todo {
     display: flex;
     justify-content: center;
-    
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
 
     &__list {
         list-style-type: none;
+        width: 100%;
+    }
+
+    &__list-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 40px;
         border: 1px solid black;
-        width: 80%;
+        border-radius: 20px;
+        margin: 10px 0px;
+        padding: 0px 10px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    &__checkbox {
+        margin-right: 10px;
     }
 }
