@@ -29,6 +29,18 @@ function App() {
     }
   }
 
+  const handleCheck = (event) => {
+    const todoText = event.target.nextSibling;
+    if(event.target.checked) {
+      todoText.style.textDecoration = 'line-through'
+    } else {
+      todoText.style.textDecoration = 'none'
+    }
+  }
+
+  const handleDelete = (event) => {
+    const removedItem = todos.filter(todo => Number(todo.id) !== Number(event.target.getAttribute('data-todoid')))
+    setTodos(removedItem);
   }
 
   return (
@@ -36,7 +48,7 @@ function App() {
       <h1>My Todos</h1>
       <ResetButton resetTodos={handleReset} />
       <AddTodo addTodo={addTodo} handleInputChange={handleInputChange} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} handleCheck={handleCheck} handleDelete={handleDelete} />
     </div>
   );
 }
