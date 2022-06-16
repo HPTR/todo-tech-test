@@ -47,7 +47,7 @@ function App() {
     <div className="App">
       <h1>My Todos</h1>
       <ResetButton resetTodos={handleReset} />
-      <AddTodo addTodo={addTodo} handleInputChange={handleInputChange} />
+      <AddTodo addTodo={addTodo} handleInputChange={handleInputChange} input={input} />
       <TodoList todos={todos} handleCheck={handleCheck} handleDelete={handleDelete} />
     </div>
   );
