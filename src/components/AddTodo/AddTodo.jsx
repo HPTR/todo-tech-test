@@ -10,7 +10,7 @@ const AddTodo = (props) => {
   return (
     <div className='add-todo'>
       <input className='add-todo__input' type='text' onChange={handleInputChange} value={input} />
-      <InlineButton className='add-todo__button' onClick={addTodo} />
+      <InlineButton label='Add' className='add-todo__button' onClick={addTodo} />
     </div>
   )
 }

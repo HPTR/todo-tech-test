@@ -3,11 +3,11 @@ import './InlineButton.scss'
 
 const InlineButton = (props) => {
 
-  const { onClick, todoId } = props;
+  const { onClick, todoId, label } = props;
 
   return (
     <div>
-      <button onClick={onClick} data-todoid={todoId} >Plus</button>
+      <button onClick={onClick} data-todoid={todoId} >{label}</button>
     </div>
   )
 }

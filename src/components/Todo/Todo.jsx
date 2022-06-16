@@ -11,9 +11,11 @@ const Todo = (props) => {
     <div className='todo'>
       <ul className='todo__list'>
         <li className='todo__list-item'>
-          <input className='todo__input' onChange={handleCheck} type="checkbox" />
-          <span className='todo__text' >{todo}</span>
-          <InlineButton className='todo__button' onClick={handleDelete} todoId={todoId} />
+          <div className="todo__item">
+            <input className='todo__checkbox' onChange={handleCheck} type="checkbox" />
+            <span className='todo__text' >{todo}</span>
+          </div>
+          <InlineButton label={'Delete'} className='todo__button' onClick={handleDelete} todoId={todoId} />
         </li>
       </ul>
     </div>

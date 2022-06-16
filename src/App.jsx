@@ -44,11 +44,13 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <h1>My Todos</h1>
-      <ResetButton resetTodos={handleReset} />
-      <AddTodo addTodo={addTodo} handleInputChange={handleInputChange} input={input} />
-      <TodoList todos={todos} handleCheck={handleCheck} handleDelete={handleDelete} />
+    <div className="my-todos">
+      <div className="my-todos__header">
+        <h1 className='my-todos__heading'>My Todos</h1>
+        <ResetButton className='my-todos__reset' resetTodos={handleReset} />
+      </div>
+      <AddTodo className='my-todos__add' addTodo={addTodo} handleInputChange={handleInputChange} input={input} />
+      <TodoList className='my-todos__list' todos={todos} handleCheck={handleCheck} handleDelete={handleDelete} />
     </div>
   );
 }
