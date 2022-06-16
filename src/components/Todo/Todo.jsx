@@ -1,9 +1,22 @@
 import React from 'react'
 import './Todo.scss'
 
-const Todo = () => {
+import InlineButton from '../InlineButton/InlineButton';
+
+const Todo = (props) => {
+
+  const { todo, handleCheck, handleDelete, todoId } = props;
+
   return (
-    <div>Todo</div>
+    <div className='todo'>
+      <ul className='todo__list'>
+        <li className='todo__list-item'>
+          <input className='todo__input' onChange={handleCheck} type="checkbox" />
+          <span className='todo__text' >{todo}</span>
+          <InlineButton className='todo__button' onClick={handleDelete} todoId={todoId} />
+        </li>
+      </ul>
+    </div>
   )
 }
 
