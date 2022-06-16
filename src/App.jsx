@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.scss';
+import './assets/sass/reset.scss';
 
 import ResetButton from './components/ResetButton/ResetButton'
 import AddTodo from './components/AddTodo/AddTodo'
