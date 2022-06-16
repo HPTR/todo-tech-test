@@ -15,8 +15,13 @@ function App() {
     setInput(event.target.value);
   }
 
-  const addTodo = (event) => {
-    setTodos(prev => [...prev, input])
+  const addTodo = () => {
+    setTodos(prev => [...prev, {
+      id: prev[prev.length-1] ? prev[prev.length-1].id + 1 : 0,
+      text: input
+    }])
+    setInput('')
+  }
   }
 
   return (
