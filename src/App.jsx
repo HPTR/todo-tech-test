@@ -22,12 +22,19 @@ function App() {
     }])
     setInput('')
   }
+
+  const handleReset = () => {
+    if (window.confirm('Do you want to delete all todos?')) {
+      setTodos([])
+    }
+  }
+
   }
 
   return (
     <div className="App">
       <h1>My Todos</h1>
-      <ResetButton resetTodos={setTodos} />
+      <ResetButton resetTodos={handleReset} />
       <AddTodo addTodo={addTodo} handleInputChange={handleInputChange} />
       <TodoList todos={todos} />
     </div>
