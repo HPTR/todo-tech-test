@@ -5,12 +5,12 @@ import InlineButton from '../InlineButton/InlineButton'
 
 const AddTodo = (props) => {
 
-  const {addTodo, handleInputChange} = props;
+  const {addTodo, handleInputChange, input} = props;
 
   return (
-    <div>
-      <input type='text' onChange={handleInputChange} />
-      <InlineButton addTodo={addTodo} />
+    <div className='add-todo'>
+      <input className='add-todo__input' type='text' onChange={handleInputChange} value={input} />
+      <InlineButton className='add-todo__button' onClick={addTodo} />
     </div>
   )
 }
